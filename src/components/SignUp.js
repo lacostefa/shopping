@@ -1,17 +1,34 @@
-import React, {useState} from "react";
+import React, {useReducer, useState} from "react";
+import {Link} from "react-router-dom";
+
+
+const initialForm = {
+    fullName: "",
+    password: "",
+    confirmPassword: "",
+    massage: "",
+    validWhen: false
+}
+
+const reducer = (action, state) => {
+    switch (action.type) {
+
+    }
+}
+
 
 const SignUp = () => {
-    const [state, setState] = useState([]);
 
+    const [form, dispatch] = useReducer(reducer, initialForm);
+
+    const changeHandler = (event) => {
+        dispatch(event.target.name)
+    }
     return (
         <div>
             <div>
-                <lable>Name</lable>
-                <input type="text" name="name"/>
-            </div>
-            <div>
-                <label>LastName</label>
-                <input type="text" name="lastName"/>
+                <lable>Full Name</lable>
+                <input type="text" name="name" onChange={changeHandler}/>
             </div>
             <div>
                 <label>Password</label>
@@ -23,6 +40,10 @@ const SignUp = () => {
             </div>
             <div>
                 <input type="radio" name="radio"/>
+            </div>
+            <div>
+                <Link to="/login">Login</Link>
+                <button>Submit</button>
             </div>
 
         </div>
