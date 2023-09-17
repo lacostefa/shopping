@@ -1,10 +1,14 @@
 import './App.css';
 import MainPage from "./components/MainPage";
+import ContextProductsProvider from "./context/ContextProductsProvider";
+import products from "./components/Products";
 
-function App() {
+function App({props}) {
     return (
         <div className="App">
-            <MainPage/>
+            <ContextProductsProvider>
+                <MainPage/>
+            </ContextProductsProvider>
         </div>
     );
 }
