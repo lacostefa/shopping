@@ -4,4 +4,8 @@ const shorten = (title) => {
     return newSplited
 }
 
+const quantityCount=(state,id)=>{
+    
+}
+
 export {shorten};
