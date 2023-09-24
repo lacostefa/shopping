@@ -3,26 +3,27 @@ import React, {createContext, useEffect, useState} from "react";
 ///Api
 import {getProduct} from "../services/api";
 
-const contextProducts = createContext();
+export const ContextProducts = createContext();
 
-const ContextProduct = ({children}) => {
+const ContextProductsProvider = ({children}) => {
 
-    const [products, setProducts] = useState({})
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         const fetchIp = async () => {
             setProducts(await getProduct())
+            console.log(products)
         }
         fetchIp()
     }, [])
 
     return (
         <div>
-            <contextProducts.Provider value={products}>
+            <ContextProducts.Provider value={products}>
                 {children}
-            </contextProducts.Provider>
+            </ContextProducts.Provider>
         </div>
     )
 }
 
-;
+export default ContextProductsProvider; 
