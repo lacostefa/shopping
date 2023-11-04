@@ -24,15 +24,15 @@ function App() {
                 <CartContextProvider>
                     <Navbar/>
                     <Routes>
-                        <Route path="/" element={<MainPage/>}/>
-                        <Route path="/signup" element={<SignUp/>}/>
-                        <Route path="/login" element={<Login/>}/>
-                        <Route path="/products/:id" element={<ProductDetails/>}/>
-                        <Route path="/aboutUs" element={<AboutUs/>}/>
-                        <Route path="/products" element={<Store/>}/>
-                        <Route path="/cart" element={<ShopCart/>}/>
-                        <Route path="/*" element={<Navigate to="/mainPage"/>}/>
-                        <Route path="/adminPage" element={<AdminPage/>}/>
+                        <Route path="/shopping/" element={<MainPage/>}/>
+                        <Route path="/shopping/signup" element={<SignUp/>}/>
+                        <Route path="/shopping/login" element={<Login/>}/>
+                        <Route path="/shopping/products/:id" element={<ProductDetails/>}/>
+                        <Route path="/shopping/aboutUs" element={<AboutUs/>}/>
+                        <Route path="/shopping/products" element={<Store/>}/>
+                        <Route path="/shopping/cart" element={<ShopCart/>}/>
+                        <Route path="/shopping/*" element={<Navigate to="/shopping/mainPage"/>}/>
+                        <Route path="/shopping/adminPage" element={<AdminPage/>}/>
                     </Routes>
                 </CartContextProvider>
             </ContextProductsProvider>

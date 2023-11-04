@@ -15,31 +15,31 @@ const Navbar = () => {
         <div className="container_">
             <div className="sigUp-login">
                 <div className="signUp">
-                    <Link to='/signup'>Sign Up</Link>
+                    <Link to='/shopping/signup'>Sign Up</Link>
                 </div>
                 <div className="login">
-                    <Link to='/login'>Login</Link>
+                    <Link to='/shopping/login'>Login</Link>
                 </div>
             </div>
             <div>
                 <div className="about-product-">
                     <div className="cart">
-                        <Link to='/cart'>
+                        <Link to='/shopping/cart'>
                             <img src={shopCart} alt="shopCart"/>
                         </Link>
                         <span>{state.itemsCounter}</span>
                     </div>
                     <div className="paddingFont">
-                        <Link to="/aboutUs">About Us</Link>
+                        <Link to="/shopping/aboutUs">About Us</Link>
                     </div>
                     <div className="paddingFont">
-                        <Link to="/products">Products</Link>
+                        <Link to="/shopping/products">Products</Link>
                     </div>
                     <div className="paddingFont">
-                        <Link to="/">Main Page</Link>
+                        <Link to="/shopping/">Main Page</Link>
                     </div>
                     <div className="paddingFont">
-                        <Link to="/adminPage">Admin Page</Link>
+                        <Link to="/shopping/adminPage">Admin Page</Link>
                     </div>
                 </div>
             </div>
