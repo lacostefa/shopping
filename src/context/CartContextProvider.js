@@ -7,10 +7,9 @@ const initialState = {
     checkOut: false
 }
 
-
-const sumItems = (items) => {
-    const itemsCounter = items.reduce((total, product) => total + product.quantity, 0);
-    const total = items.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
+const sumItems = (item) => {
+    const itemsCounter = item.reduce((total, product) => total + product.quantity, 0);
+    const total = item.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
     return {itemsCounter, total}
 }
 
@@ -22,12 +21,12 @@ const cartReducer = (state, action) => {
                     ...action.payload,
                     quantity: 1,
                 })
-                return {
-                    ...state,
-                    selectedItems: [...state.selectedItems],
-                    checkOut: false,
-                    ...sumItems(state.selectedItems)
-                }
+            }
+            return {
+                ...state,
+                selectedItems: [...state.selectedItems],
+                checkOut: false,
+                ...sumItems(state.selectedItems)
             }
         case "REMOVE-ITEM":
             const newSelectedItems = state.selectedItems.filter(item => item.id !== action.payload.id)
@@ -38,14 +37,16 @@ const cartReducer = (state, action) => {
             }
         case "INCREASE":
             const indexA = state.selectedItems.findIndex(item => item.id === action.payload.id)
-            state.selectedItems[indexA].quantity++
+            state.selectedItems[indexA].quantity++;
+
             return {
                 ...state,
                 ...sumItems(state.selectedItems)
             }
         case "DECREASE":
             const indexD = state.selectedItems.findIndex(item => item.id === action.payload.id)
-            state.selectedItems[indexD].quality--
+            state.selectedItems[indexD].quantity--;
+
             return {
                 ...state,
                 ...sumItems(state.selectedItems)
@@ -65,7 +66,7 @@ const cartReducer = (state, action) => {
                 checkOut: false
             }
         default:
-            return initialState
+            return state;
     }
 }
 

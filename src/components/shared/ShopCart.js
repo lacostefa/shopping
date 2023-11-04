@@ -1,4 +1,8 @@
 import React, {useContext} from "react";
+import {Link} from "react-router-dom";
+
+///Css
+import "../../css/ShopCart.scss";
 
 ////Components
 import Cart from "./Cart";
@@ -10,24 +14,40 @@ const ShopCart = () => {
     const {state, dispatch} = useContext(CartContext);
 
     return (
-        <div>
-            <div>
+        <div className="container-flex">
+            <div className="container-cartShop">
                 {
                     state.selectedItems.map(item => <Cart key={item.id} data={item}/>)
                 }
             </div>
-            <div>
-                {
-                    state.itemsCounter > 0 && <div>
-                        <span>Total Items:{state.itemsCounter}</span>
-                        <span>Total Payments:{state.total}</span>
+
+            {
+                state.itemsCounter > 0 &&
+                <div className="total-pay">
+                    <p><span>Total Items : </span>{state.itemsCounter}</p>
+                    <p><span>Total Payments : </span> {state.total}$</p>
+
+                    <div className="button-ch-cl">
+                        <button className="checkOut" onClick={() => dispatch({type: "CHECKOUT"})}>CheckOut</button>
+                        <button className="clear" onClick={() => dispatch({type: "CLEAR"})}>Clear</button>
                     </div>
-                }
-                <div>
-                    <button onClick={() => dispatch({type: "CHECKOUT"})}>CheckOut</button>
-                    <button onClick={() => dispatch({type: "CLEAR"})}>Clear</button>
                 </div>
-            </div>
+            }
+
+            {
+                state.checkOut && <div>
+                    <h1>Checked out successfully</h1>
+                    <Link className="a-fontWeight" to="/products">Buy More</Link>
+                </div>
+            }
+
+            {
+                !state.checkOut && state.itemsCounter === 0 &&
+                <div>
+                    <h1>Want to Buy?</h1>
+                    <Link className="a-fontWeight" to="/products">Go to shop</Link>
+                </div>
+            }
         </div>
     )
 }

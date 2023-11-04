@@ -3,10 +3,12 @@ import {Link} from "react-router-dom";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
+////Css
+import "../../css/Login.scss";
 
 ///Functions
-import {notify} from "../functions/notify";
-import {validate} from "../functions/Validat";
+import {notify} from "../../functions/notify";
+import {validate} from "../../functions/Validat";
 
 const Login = () => {
 
@@ -43,24 +45,31 @@ const Login = () => {
     }, [data, touched])
 
     return (
-        <div>
-            <form onSubmit={submitHandler}>
+        <div className="cart-container">
+            <form className="form" onSubmit={submitHandler}>
                 <div>
-                    <h3>Login</h3>
+                    <h2 className="s-up">Login</h2>
                 </div>
-                <div>
+                <div className="f-name">
                     <label>Full Name</label>
-                    <input type="text" name="fullName" onChange={changeHandler}
+                    <input className={(errors.fullName && touched.fullName) ? " inputRed" : " inputBlue"}
+                           type="text"
+                           name="fullName"
+                           onChange={changeHandler}
                            onFocus={focusHandler}/>
+                    {errors.fullName && touched.fullName && <span>{errors.fullName}</span>}
                 </div>
-                <div>
+                <div className="f-name">
                     <label>Password</label>
-                    <input type="password" onChange={changeHandler}
+                    <input className={(errors.password && touched.password) ? " inputRed" : " inputBlue"}
+                           type="password"
+                           onChange={changeHandler}
                            onFocus={focusHandler}/>
+                    {errors.password && touched.password && <span>{errors.password}</span>}
                 </div>
-                <div>
-                    <Link to="login">Sign Up</Link>
-                    <button type="submit">Login</button>
+                <div className="lo-sub">
+                    <Link to="/signUp">Sign Up</Link>
+                    <button className="submit btn btn-primary" type="submit">Login</button>
                 </div>
                 <ToastContainer/>
             </form>

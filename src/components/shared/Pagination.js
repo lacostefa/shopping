@@ -1,11 +1,11 @@
 import React, {useState, useEffect, useContext} from "react";
 import ReactPaginate from "react-paginate";
-import styles from "../../css/Paginate.module.css";
+import "../../css/Paginate.scss";
 import Product from "./Product";
 import {ContextProducts} from "../../context/ContextProductsProvider";
 
-const Pagination = (props) => {
-    
+const Pagination = () => {
+
     const data = useContext(ContextProducts);
 
     const [currentItems, setCurrentItems] = useState([]);
@@ -26,17 +26,17 @@ const Pagination = (props) => {
 
     return (
         <>
-            <div className={styles.pagination}>
+            <div className="pagination">
                 {currentItems.map(item => <Product key={item.id} productData={item}/>)}
             </div>
-            <ReactPaginate
-                breakLabel="..."
-                nextLabel="next >"
-                onPageChange={handlePageClick}
-                pageRangeDisplayed={1}
-                pageCount={pageCount}
-                previousLabel="< previous"
-                renderOnZeroPageCount={null}
+            <ReactPaginate className="next-previous"
+                           breakLabel="..."
+                           nextLabel="next >"
+                           onPageChange={handlePageClick}
+                           pageRangeDisplayed={1}
+                           pageCount={pageCount}
+                           previousLabel="< previous"
+                           renderOnZeroPageCount={null}
             />
         </>
     );

@@ -1,10 +1,36 @@
-
 .pagination {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 20px;
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  flex-wrap: wrap;
+  margin: 1rem;
 }
+
+.next-previous {
+  display: flex;
+  width: 27%;
+  height: 2rem;
+  justify-content: space-between;
+  padding: 0.55rem;
+  font-size: 1.1rem;
+  color: #0d6efd;
+}
+
+.next-previous li:hover {
+  text-shadow: 2px 2px 4px #000000;
+  color: #0d6efd;
+  border: 1px solid silver;
+  border-radius: 2rem;
+  box-sizing: unset;
+}
+
+.next-previous a {
+  color: #0d6efd;
+}
+
+* {
+  box-sizing: revert;
+}
+

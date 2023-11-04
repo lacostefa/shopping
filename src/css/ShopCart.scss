@@ -1,0 +1,278 @@
+.container-cart {
+  border: 1px solid silver;
+  width: 86%;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  height: 8rem;
+  border-radius: 1rem;
+  padding-left: 2rem;
+}
+
+.container-cartShop {
+  width: 80%;
+}
+
+.container-flex {
+  display: flex;
+  margin: 1rem;
+}
+
+.img-product img {
+  width: 5rem;
+  padding: 1.5rem;
+}
+
+.title-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.t-shorten {
+  color: #1a73e8;
+}
+
+.p-price {
+  color: #34a853;
+  font-weight: 700;
+}
+
+.quantity {
+  color: white;
+  background-color: rgba(241, 129, 16, 0.91);
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.25rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.total-pay {
+  width: 36%;
+  height: 11rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid silver;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  justify-content: space-between;
+}
+
+.total-pay p {
+  color: rgb(61, 61, 61);
+}
+
+.total-pay p span {
+  color: #1a73e8;
+}
+
+.button-ch-cl {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+
+.checkOut {
+  background-color: #34a853;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  height: 2rem;
+  width: 6rem;
+}
+
+.clear {
+  background-color: #34a853;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  color: white;
+}
+
+.checkOut:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px,
+  rgba(0, 0, 0, 0.12) 0 -12px 30px,
+  rgba(0, 0, 0, 0.12) 0 4px 6px,
+  rgba(0, 0, 0, 0.17) 0 12px 13px,
+  rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+
+.clear:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px,
+  rgba(0, 0, 0, 0.12) 0 -12px 30px,
+  rgba(0, 0, 0, 0.12) 0 4px 6px,
+  rgba(0, 0, 0, 0.17) 0 12px 13px,
+  rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+
+.button-de-in-trash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0.65rem;
+  padding-top: 2rem;
+}
+
+.DECREASE {
+  margin: 0.45rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.REMOVE {
+  width: 2rem;
+  height: 2rem;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1.5rem;
+  margin: 0.25rem;
+}
+
+.color-white {
+  color: white;
+}
+
+.INCREASE {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.img-product {
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+}
+
+.l-details-quantity {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #34a853;
+  font-size: 2rem;
+}
+
+.a-fontWeight {
+  color: #1a73e8;
+  font-weight: bold;
+}
+
+.a-fontWeight:hover {
+  color: #043e84;
+}
+
+@media (max-width: 958px) {
+  .total-pay {
+    margin: 0;
+    height: 9rem;
+    padding-top: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-cart {
+    width: 99%;
+  }
+  .total-pay {
+    width: 25%;
+    margin-top: 3rem;
+  }
+  .container-cartShop {
+    margin: 2rem;
+    width: 57%;
+  }
+  .title-price {
+    font-size: 0.85rem;
+    padding-right: 2rem;
+  }
+  .quantity {
+    height: 1.7rem;
+  }
+  .REMOVE {
+    height: 1.7rem;
+  }
+
+  .button-ch-cl {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-flex {
+    width: 100%;
+  }
+  .total-pay {
+    margin-left: 3rem;
+    width: 28%;
+  }
+  .quantity {
+    margin-top: 4.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-flex {
+    width: 100%;
+    flex-direction: column;
+  }
+  .container-cart {
+    width: 86%;
+  }
+  .container-cartShop {
+    padding-right: 1rem;
+    width: 97%;
+    margin: 0;
+  }
+
+  .total-pay {
+    padding: 1.2rem;
+    width: 76%;
+  }
+
+  .total-pay p {
+    padding-top: 0;
+    padding-left: 1.2rem;
+    font-weight: bold;
+  }
+
+  .img-product {
+    height: 6rem;
+  }
+  .quantity {
+    padding-top: 0.25rem;
+  }
+
+  .DECREASE {
+    height: 1.7rem;
+    font-size: 1.7rem;
+  }
+  .p-price {
+    padding-left: 0;
+  }
+  .checkOut {
+    margin-left: 1rem;
+  }
+  .clear {
+    margin-right: 4rem;
+  }
+}

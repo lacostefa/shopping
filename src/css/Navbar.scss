@@ -1,0 +1,144 @@
+$primaryColor: #fff;
+$fontSize: 3rem;
+$margin: 0.5rem;
+$transition: all 0.2s ease;
+
+
+.container_ {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem;
+  background-color: #24465d;
+}
+
+a {
+  text-decoration: none;
+  transition: $transition;
+  cursor: pointer;
+}
+
+.sigUp-login {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+}
+
+.signUp a {
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid silver;
+  color: #fff;
+  margin: 0.25rem;
+  padding: 0.25rem 0.75rem 0.45rem;
+  transition: $transition;
+}
+
+.login a {
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid silver;
+  color: #fff;
+  padding: 0.25rem 0.75rem 0.45rem;
+  transition: $transition;
+}
+
+.login a:hover {
+  color: gray;
+  transition: $transition;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px 0 inset;
+}
+
+.signUp a:hover {
+  color: gray;
+  transition: $transition;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px 0 inset;
+}
+
+.about-product- {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.75rem;
+  color: #fff;
+}
+
+.paddingFont a {
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.paddingFont a:hover {
+  color: gray;
+  transition: $transition;
+}
+
+.cart img {
+  width: 1.5rem;
+  filter: invert(1);
+}
+
+.cart a img:hover {
+  color: gray;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.cart span {
+  min-width: 17px;
+  border-radius: 100%;
+  background-color: #0d6efd;
+  position: relative;
+  display: inline-block;
+  right: 0;
+  top: -11px;
+  left: -14px;
+  color: #fff;
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f4EEEA;
+    font-size: 0.85rem;
+  }
+  .cart span {
+    position: relative;
+    top: -11px;
+    left: -49%;
+    width: 10px;
+  }
+  .sigUp-login a {
+    font-size: 0.55rem;
+  }
+  .paddingFont a {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #f4EEEA;
+    font-size: 1rem
+  }
+  .sigUp-login {
+    padding-top: 0.75rem;
+  }
+}
+
+@media (max-width: 555px) {
+  .container_ {
+    font-size: 0.25rem;
+    padding: 0;
+  }
+  .sigUp-login a {
+    font-size: 0.55rem;
+  }
+}

@@ -9,12 +9,14 @@ const ContextProductsProvider = ({children}) => {
 
     const [products, setProducts] = useState([]);
 
+
     useEffect(() => {
-        const fetchIp = async () => {
-            setProducts(await getProduct())
-            console.log(products)
-        }
-        fetchIp()
+
+        (
+            async () => {
+                setProducts(await getProduct())
+            }
+        )()
     }, [])
 
     return (
@@ -22,8 +24,7 @@ const ContextProductsProvider = ({children}) => {
             <ContextProducts.Provider value={products}>
                 {children}
             </ContextProducts.Provider>
-        </div>
-    )
+        </div>)
 }
 
 export default ContextProductsProvider; 
