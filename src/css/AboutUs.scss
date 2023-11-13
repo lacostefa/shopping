@@ -55,10 +55,9 @@ h4:hover {
 }
 
 @media (max-width: 768px) {
-  .We-about {
-    font-family: inherit;
-    padding: 0;
-    width: 100%;
+  .container-about {
+    width: 90%; /* Adjust the width for smaller screens */
+    flex-direction: column;
   }
   h2 {
     font-size: 0.65rem;
@@ -66,6 +65,11 @@ h4:hover {
   }
   h4 {
     font-size: 0.55rem;
+  }
+  .We-about {
+    font-family: inherit;
+    padding: 0;
+    width: 100%; /* Full width for smaller screens */
   }
   .We-about a {
     font-size: 0.55rem;
