@@ -1,11 +1,4 @@
-.cart-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  padding: 3rem;
-}
-
+/* Common styles for form elements */
 .form {
   display: flex;
   flex-direction: column;
@@ -19,34 +12,21 @@
   background-color: #fff;
 }
 
-.f-name {
-  display: flex;
-  flex-direction: column;
-  padding: 0.1rem 0.1rem;
-  margin: 0.2rem;
-}
-
-.fe-ma {
-  display: flex;
-  margin-top: 1rem;
-  align-self: flex-start;
-  padding-left: 2rem;
-}
-
-.f-name input {
+.form input {
   height: 2.7rem;
   width: 27rem;
   border-radius: 0.35rem;
   border: 1px solid silver;
 }
 
-.f-name label {
+.form label {
   line-height: 1.5rem;
   color: gray;
   font-weight: 400;
   text-align: left;
 }
 
+/* Submit button styles */
 .submit {
   color: white;
   padding: 0.45rem 1rem;
@@ -58,66 +38,15 @@
 
 .submit:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
-  rgba(0, 0, 0, 0.3) 0 30px 60px -30px,
-  rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
+    rgba(0, 0, 0, 0.3) 0 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
   color: #fff;
 }
 
-.lo-sub {
-  margin-top: 1rem;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-}
-
-.lo-sub a {
-  padding-top: 0.45rem;
-  font-size: 1.1rem;
-  color: #282c34;
-}
-
-.lo-sub a:hover {
-  color: #0d6efd;
-}
-
-.label-radio {
-  display: flex;
-  margin-right: 38%;
-  padding: 3%;
-}
-
-input[type="radio"]:checked {
-  background-color: #0d6efd;
-  box-shadow: inset 1em 1em var(--form-control-color);
-  border-radius: 2rem;
-  margin-right: 5rem;
-}
-
-.inputRed {
-  border-color: red;
-  height: 2rem;
-  width: 23rem;
-  border-radius: 0.35rem;
-}
-
-.inputBlue {
-  border-color: #0d28d0;
-  height: 2rem;
-  width: 23rem;
-  border-radius: 0.35rem;
-}
-
-.inputBlue:focus,
-.inputRed:focus {
-  border-color: red !important;
-  height: 2rem;
-  width: 23rem;
-  border-radius: 0.35rem;
-}
-
+/* Error message styles */
 .f-name span {
   color: red;
-  background-color: rgb(255, 0, 0, 0.175);
+  background-color: rgba(255, 0, 0, 0.175);
   font-size: 0.65rem;
   text-align: left;
   padding-top: 0.15rem;
@@ -127,15 +56,13 @@ input[type="radio"]:checked {
   border-radius: 0.25rem;
 }
 
+/* Media Queries */
 @media (max-width: 480px) {
   .form {
     width: 100%;
   }
-  .f-name input {
+  .form input {
     width: 20rem;
-  }
-  .container_ {
-    font-size: 0.65rem;
   }
 }
 
@@ -143,33 +70,25 @@ input[type="radio"]:checked {
   .form {
     width: 70%;
   }
-  .f-name input {
+  .form input {
     width: 20rem;
   }
 }
 
 @media (max-width: 600px) {
-
   .form {
     width: 100%;
   }
-  .f-name input {
+  .form input {
     width: 20rem;
-  }
-  .margin-75- a {
-    font-size: 0.75rem;
   }
 }
 
-
-@media(min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .form {
     width: 70%;
   }
-  .f-name input {
+  .form input {
     width: 27rem;
-  }
-  .margin-75- a {
-    font-size: 1rem;
   }
 }
