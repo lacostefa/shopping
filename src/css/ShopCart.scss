@@ -11,6 +11,7 @@
 
 .container-cartShop {
   width: 80%;
+  margin: 2rem;
 }
 
 .container-flex {
@@ -18,9 +19,11 @@
   margin: 1rem;
 }
 
-.img-product img {
+.img-product img,
+.img-product {
   width: 5rem;
-  padding: 1.5rem;
+  height: 5rem;
+  padding: 1rem;
 }
 
 .title-price {
@@ -37,6 +40,7 @@
 .p-price {
   color: #34a853;
   font-weight: 700;
+  padding-left: 0.95rem; /* Adjusted padding */
 }
 
 .quantity {
@@ -64,6 +68,7 @@
 
 .total-pay p {
   color: rgb(61, 61, 61);
+  padding-top: 0.95rem; /* Adjusted padding */
 }
 
 .total-pay p span {
@@ -76,7 +81,8 @@
   padding-bottom: 1.5rem;
 }
 
-.checkOut {
+.checkOut,
+.clear {
   background-color: #34a853;
   color: white;
   font-size: 1rem;
@@ -84,30 +90,16 @@
   border-radius: 0.25rem;
   height: 2rem;
   width: 6rem;
+  transition: box-shadow 0.2s ease; /* Added transition */
 }
 
-.clear {
-  background-color: #34a853;
-  border: none;
-  border-radius: 0.25rem;
-  font-size: 0.85rem;
-  color: white;
-}
-
-.checkOut:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px,
-  rgba(0, 0, 0, 0.12) 0 -12px 30px,
-  rgba(0, 0, 0, 0.12) 0 4px 6px,
-  rgba(0, 0, 0, 0.17) 0 12px 13px,
-  rgba(0, 0, 0, 0.09) 0 -3px 5px;
-}
-
+.checkOut:hover,
 .clear:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px,
-  rgba(0, 0, 0, 0.12) 0 -12px 30px,
-  rgba(0, 0, 0, 0.12) 0 4px 6px,
-  rgba(0, 0, 0, 0.17) 0 12px 13px,
-  rgba(0, 0, 0, 0.09) 0 -3px 5px;
+    rgba(0, 0, 0, 0.12) 0 -12px 30px,
+    rgba(0, 0, 0, 0.12) 0 4px 6px,
+    rgba(0, 0, 0, 0.17) 0 12px 13px,
+    rgba(0, 0, 0, 0.09) 0 -3px 5px;
 }
 
 .button-de-in-trash {
@@ -118,31 +110,8 @@
   padding-top: 2rem;
 }
 
-.DECREASE {
-  margin: 0.45rem;
-  width: 2rem;
-  height: 2rem;
-  background-color: #1a73e8;
-  border: none;
-  border-radius: 0.25rem;
-  color: white;
-  font-size: 1.5rem;
-}
-
-.REMOVE {
-  width: 2rem;
-  height: 2rem;
-  background-color: #1a73e8;
-  border: none;
-  border-radius: 0.25rem;
-  font-size: 1.5rem;
-  margin: 0.25rem;
-}
-
-.color-white {
-  color: white;
-}
-
+.DECREASE,
+.REMOVE,
 .INCREASE {
   width: 2rem;
   height: 2rem;
@@ -151,12 +120,21 @@
   background-color: #1a73e8;
   border: none;
   border-radius: 0.25rem;
+  margin: 0.25rem;
 }
 
-.img-product {
-  width: 5rem;
-  height: 5rem;
-  padding: 1rem;
+.DECREASE,
+.REMOVE,
+.INCREASE:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px,
+    rgba(0, 0, 0, 0.12) 0 -12px 30px,
+    rgba(0, 0, 0, 0.12) 0 4px 6px,
+    rgba(0, 0, 0, 0.17) 0 12px 13px,
+    rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+
+.color-white {
+  color: white;
 }
 
 .l-details-quantity {
