@@ -11,6 +11,8 @@
 .width-product {
   width: 30%;
   height: 30%;
+  margin-top: 1.5rem; /* Added margin-top for spacing */
+  padding-right: 0.25rem;
 }
 
 .container-t-de-ca {
@@ -21,6 +23,8 @@
   color: rgba(225, 122, 18, 0.91);
   font-size: 1.1rem;
   font-weight: bold;
+  padding-top: 0; /* Adjusted padding */
+  padding-left: 0; /* Adjusted padding */
 }
 
 .category span {
@@ -38,7 +42,6 @@
   font-size: 1.1rem;
   font-weight: bold;
   padding: 1rem;
-
 }
 
 .price-link {
@@ -47,7 +50,7 @@
   text-align: left;
 }
 
-.link-l- {
+.link-l {
   border-radius: 0.25rem;
   text-align: center;
   color: white;
@@ -57,7 +60,7 @@
   border: none;
 }
 
-.price-p- {
+.price-p {
   color: white;
   width: 4rem;
   text-align: center;
@@ -67,6 +70,7 @@
   border: none;
 }
 
+/* Media Query for Larger Screens */
 @media (min-width: 600px) {
   .container-details {
     width: 74%;
@@ -75,16 +79,11 @@
     padding-top: 0;
     padding-left: 0;
   }
-  .description {
-    padding-left: 0;
-  }
   .width-product {
     margin-top: 1.5rem;
     padding-right: 0.25rem;
   }
-
   .container-t-de-ca {
     padding: 0.55rem;
   }
-
 }
