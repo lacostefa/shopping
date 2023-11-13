@@ -1,32 +1,37 @@
+/* Common styles for both input classes */
+.inputCommon {
+  height: 2rem;
+  border-radius: 0.35rem;
+}
+
+/* Red input */
 .inputRed {
   border: 1px solid red;
-  height: 2rem;
-  border-radius: 0.35rem;
+  width: 100%; /* Take up full width */
 }
 
+/* Blue input */
 .inputBlue {
-  border: #043e84;
-  height: 2rem;
-  width: 23rem;
-  border-radius: 0.35rem;
+  border: 1px solid #043e84; /* Fix border color */
+  width: 100%; /* Take up full width */
+  max-width: 23rem; /* Set a maximum width */
 }
 
+/* Focus styles for both inputs */
 .inputBlue:focus,
 .inputRed:focus {
   border: 1px solid red;
-  height: 2rem;
-  width: 23rem;
-  border-radius: 0.35rem;
 }
 
-.f-name span {
-  color: red;
-  background-color: rgb(255, 0, 0, 0.175);
-  font-size: 0.65rem;
-  text-align: left;
-  padding-top: 0.15rem;
-  margin: 0.25rem;
-  width: 27%;
-  height: 1rem;
-}
+/* Responsive adjustments for small screens */
+@media only screen and (max-width: 600px) {
+  .inputBlue,
+  .inputRed {
+    width: 100%; /* Take up full width on small screens */
+  }
 
+  .f-name span {
+    width: 100%; /* Take up full width on small screens */
+    font-size: 1.5vw; /* Adjust the multiplier as needed */
+  }
+}
