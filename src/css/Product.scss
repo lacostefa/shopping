@@ -14,8 +14,13 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 
-.title {
+.title,
+.span-price,
+.details {
   padding-left: 0.95rem;
+}
+
+.title {
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -23,18 +28,11 @@
 
 .span-price {
   font-weight: 500;
-  padding-left: 0.95rem;
   color: #2b2a2a;
 }
 
 .details {
-  color: black;
-  padding-left: 0.95rem;
   margin-top: 1rem;
-}
-
-.details:hover {
-  color: #0d6efd;
 }
 
 .container-l-b {
@@ -48,11 +46,10 @@
   padding: 1rem;
 }
 
-.AddToCart {
+.AddToCart,
+.button-3- {
   width: 7rem;
   height: 2rem;
-  margin-right: 0.35rem;
-  background-color: #0d6efd;
   border: none;
   border-radius: 0.25rem;
   color: white;
@@ -62,13 +59,6 @@
 
 .button-3- {
   width: 2rem;
-  height: 2rem;
-  background: #0d6efd;
-  border: none;
-  color: white;
-  border-radius: 0.25rem;
-  text-align: center;
-  cursor: pointer;
   font-size: 1.2rem;
 }
 
@@ -84,23 +74,14 @@
   padding-left: 0.45rem;
 }
 
+.AddToCart:hover,
 .button-3-:hover {
   box-shadow: rgba(0, 0, 0, 0.17) 0 -23px 25px 0px inset,
-  rgba(0, 0, 0, 0.15) 0 -36px 30px 0px inset,
-  rgba(0, 0, 0, 0.1) 0 -79px 40px 0px inset,
-  rgba(0, 0, 0, 0.06) 0 2px 1px, rgba(0, 0, 0, 0.09) 0 4px 2px,
-  rgba(0, 0, 0, 0.09) 0 8px 4px, rgba(0, 0, 0, 0.09) 0 16px 8px,
-  rgba(0, 0, 0, 0.09) 0 32px 16px;
-  transition: all 0.2s ease;
-}
-
-.AddToCart:hover {
-  box-shadow: rgba(0, 0, 0, 0.17) 0 -23px 25px 0px inset,
-  rgba(0, 0, 0, 0.15) 0 -36px 30px 0px inset,
-  rgba(0, 0, 0, 0.1) 0 -79px 40px 0px inset,
-  rgba(0, 0, 0, 0.06) 0 2px 1px, rgba(0, 0, 0, 0.09) 0 4px 2px,
-  rgba(0, 0, 0, 0.09) 0 8px 4px, rgba(0, 0, 0, 0.09) 0 16px 8px,
-  rgba(0, 0, 0, 0.09) 0 32px 16px;
+    rgba(0, 0, 0, 0.15) 0 -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0 -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0 2px 1px, rgba(0, 0, 0, 0.09) 0 4px 2px,
+    rgba(0, 0, 0, 0.09) 0 8px 4px, rgba(0, 0, 0, 0.09) 0 16px 8px,
+    rgba(0, 0, 0, 0.09) 0 32px 16px;
   transition: all 0.2s ease;
 }
 
@@ -119,7 +100,6 @@
     margin-left: 0;
   }
 }
-
 
 @media (max-width: 600px) {
   .container {
@@ -142,14 +122,8 @@
   .cardImage {
     padding-left: 2rem;
   }
-  p {
-    padding-top: 0.75rem;
-    padding-left: 4rem;
-  }
-  .title {
-    padding-top: 0.55rem;
-    padding-left: 4rem;
-  }
+  p,
+  .title,
   .span-price {
     padding-top: 0.55rem;
     padding-left: 4rem;
